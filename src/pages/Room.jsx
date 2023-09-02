@@ -136,7 +136,7 @@ const Room = () => {
             ))}
         </div>
 
-        <form id="message--form" onSubmit={handleSubmit} style={{display : 'block',height: '10vh', position:'relative',width: '83vw',display: 'block',height: '10vh',position: 'absolute',bottom: '75px'}}>
+        <form id="message--form" onSubmit={handleSubmit} style={{display : 'block',height: '10vh',width: '83vw',position: 'absolute',bottom: '75px'}}>
             <div>
                 <textarea 
                     required 

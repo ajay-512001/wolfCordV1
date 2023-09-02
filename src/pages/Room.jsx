@@ -147,7 +147,7 @@ const Room = () => {
                     ></textarea>
             </div>
             <div className="send-btn--wrapper">
-                <input  type="submit" className="btn btn--secondary" style={{width : '7rem', height: '3rem', fontSize: '1.3rem' , fontWeight: '700'}} value={send}/>
+                <input  type="submit" className="btn btn--secondary" style={{width : '7rem', height: '3rem', fontSize: '1.3rem' , fontWeight: '600'}} value={send}/>
             </div>
         </form>
 

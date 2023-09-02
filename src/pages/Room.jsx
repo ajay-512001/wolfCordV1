@@ -3,14 +3,14 @@ import client, { databases, DATABASE_ID, COLLECTION_ID_MESSAGES } from '../appwr
 import { ID, Query, Permission, Role} from 'appwrite';
 import Header from '../components/Header';
 import { useAuth } from '../utils/AuthContext';
-import {Trash2} from 'react-feather'
+import {ArrowRightCircle, Trash2} from 'react-feather'
 
 
 const Room = () => {
     const [messageBody, setMessageBody] = useState('')
     const [messages, setMessages] = useState([])
     const {user} = useAuth()
-
+    const send = "Send"
 
     useEffect(() => {
         getMessages();
@@ -146,9 +146,8 @@ const Room = () => {
                     value={messageBody}
                     ></textarea>
             </div>
-
             <div className="send-btn--wrapper">
-                <input className="btn btn--secondary" style={{width : '7rem', height: '4rem', fontSize: '1.5rem'}} type="submit" value="Send"/>
+                <input  type="submit" className="btn btn--secondary" style={{width : '7rem', height: '3rem', fontSize: '1.3rem' , fontWeight: '700'}} value={send}/>
             </div>
         </form>
 

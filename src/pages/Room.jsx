@@ -89,7 +89,7 @@ const Room = () => {
         <Header/>
         <div className="room--container">
 
-        <form id="message--form" onSubmit={handleSubmit}>
+        {/* <form id="message--form" onSubmit={handleSubmit}>
             <div>
                 <textarea 
                     required 
@@ -103,7 +103,7 @@ const Room = () => {
             <div className="send-btn--wrapper">
                 <input className="btn btn--secondary" type="submit" value="send"/>
             </div>
-        </form>
+        </form> */}
         
 
         <div>
@@ -135,6 +135,23 @@ const Room = () => {
                 </div>
             ))}
         </div>
+
+        <form id="message--form" onSubmit={handleSubmit}>
+            <div>
+                <textarea 
+                    required 
+                    maxLength="250"
+                    placeholder="Say something..." 
+                    onChange={(e) => {setMessageBody(e.target.value)}}
+                    value={messageBody}
+                    ></textarea>
+            </div>
+
+            <div className="send-btn--wrapper">
+                <input className="btn btn--secondary" style={{width : '7rem', height: '4rem', fontSize: '1.5rem'}} type="submit" value="Send"/>
+            </div>
+        </form>
+
         </div>
     </main>
   )

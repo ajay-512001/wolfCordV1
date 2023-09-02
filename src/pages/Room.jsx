@@ -42,7 +42,7 @@ const Room = () => {
             COLLECTION_ID_MESSAGES,
             [
                 Query.orderDesc('$createdAt'),
-                Query.limit(100),
+                //Query.limit(10),
             ]
         )
         console.log(response.documents)
@@ -106,7 +106,7 @@ const Room = () => {
         </form> */}
         
 
-        <div>
+        <div style={{height: '67vh', overflow:'scroll' }}>
             {messages.map(message => (
                 <div key={message.$id} className={"message--wrapper"}>
                     <div className="message--header">
@@ -136,7 +136,7 @@ const Room = () => {
             ))}
         </div>
 
-        <form id="message--form" onSubmit={handleSubmit}>
+        <form id="message--form" onSubmit={handleSubmit} style={{display : 'block',height: '10vh', position:'relative',width: '83vw',display: 'block',height: '10vh',position: 'absolute',bottom: '75px'}}>
             <div>
                 <textarea 
                     required 

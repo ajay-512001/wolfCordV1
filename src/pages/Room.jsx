@@ -144,6 +144,7 @@ const Room = () => {
                     placeholder="Say something..." 
                     onChange={(e) => {setMessageBody(e.target.value)}}
                     value={messageBody}
+                    style={{backgroundColor : 'rgb(37 49 92)'}}
                     ></textarea>
             </div>
             <div className="send-btn--wrapper">
